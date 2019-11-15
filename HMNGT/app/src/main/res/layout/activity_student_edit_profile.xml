@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.simon.hmngt.Activities.StudentEditProfileActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:text="Update Profile"
+                    android:textSize="20dp"
+                    android:textColor="@color/design_default_color_primary_dark"
+                    android:id="@+id/lbl"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lbl1"
+                    android:textSize="16dp"
+                    android:text="First Name"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl1"
+                    android:textSize="16dp"
+                    android:id="@+id/edFirstName"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:id="@+id/lbl2"
+                    android:layout_below="@+id/edFirstName"
+                    android:text="Last Name"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:layout_below="@+id/lbl2"
+                    android:id="@+id/edLastName"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:id="@+id/lbl7"
+                    android:layout_below="@+id/edLastName"
+                    android:text="Email"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:layout_below="@+id/lbl7"
+                    android:id="@+id/edEmail"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lbl3"
+                    android:layout_below="@+id/edEmail"
+                    android:textSize="16dp"
+                    android:text="Hobbies"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl3"
+                    android:textSize="16dp"
+                    android:id="@+id/edHobbies"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edHobbies"
+                    android:textSize="16dp"
+                    android:id="@+id/lbl4"
+                    android:text="Religion"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:textSize="16dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl4"
+                    android:id="@+id/edReligion"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lbl5"
+                    android:textSize="16dp"
+                    android:layout_below="@+id/edReligion"
+                    android:text="Phone Number"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl5"
+                    android:id="@+id/edPhone"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lbl6"
+                    android:textSize="16dp"
+                    android:layout_below="@+id/edPhone"
+                    android:text="Sports"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl6"
+                    android:textSize="16dp"
+                    android:id="@+id/edSports"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lbl8"
+                    android:textSize="16dp"
+                    android:layout_below="@+id/edSports"
+                    android:text="Drug Use??"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl8"
+                    android:textSize="16dp"
+                    android:hint="drug-reason for use"
+                    android:id="@+id/edDrugs"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lbl9"
+                    android:textSize="16dp"
+                    android:layout_below="@+id/edDrugs"
+                    android:text="Course of Study"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl9"
+                    android:textSize="16dp"
+                    android:hint="Information Technology"
+                    android:id="@+id/edCourse"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lbl10"
+                    android:textSize="16dp"
+                    android:layout_below="@+id/edCourse"
+                    android:text="Expected Visitor Count"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl10"
+                    android:textSize="16dp"
+                    android:hint="23"
+                    android:id="@+id/edVisitorCount"/>
+
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:text="Update"
+                    android:id="@+id/bnUpdate"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="16dp"
+                    android:layout_below="@+id/edVisitorCount"
+                    android:layout_marginTop="20dp"/>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

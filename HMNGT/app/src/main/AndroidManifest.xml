@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.simon.hmngt">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Activities.MainActivity" />
+        <activity android:name=".Activities.SplashScreenActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Activities.CommonActivity" />
+        <activity
+            android:name=".Activities.ManagementLogInActivity"
+            android:parentActivityName=".Activities.CommonActivity" />
+        <activity
+            android:name=".Activities.StudentLoginActivity"
+            android:parentActivityName=".Activities.CommonActivity" />
+        <activity
+            android:name=".Activities.StudentDashboardactivity"
+            android:parentActivityName=".Activities.StudentLoginActivity" />
+        <activity
+            android:name=".Activities.StudentProfileActivity"
+            android:parentActivityName=".Activities.StudentDashboardactivity" />
+        <activity
+            android:name=".Activities.StudentEditProfileActivity"
+            android:parentActivityName=".Activities.StudentProfileActivity" />
+        <activity
+            android:name=".ManagementDashboardActivity"
+            android:parentActivityName=".Activities.ManagementLogInActivity" />
+        <activity
+            android:name=".AdminRoomsListActivity"
+            android:parentActivityName=".ManagementDashboardActivity" />
+        <activity
+            android:name=".Activities.StudentRegisrationActivity"
+            android:parentActivityName=".Activities.StudentLoginActivity" />
+        <activity
+            android:name=".Activities.AddRoomActivity"
+            android:parentActivityName=".AdminRoomsListActivity" />
+        <activity android:name=".Activities.RoomDetailsActivity" />
+        <activity android:name=".InvitesActivity" />
+        <activity
+            android:name=".Activities.InviteDetailsActivity"
+            android:parentActivityName=".InvitesActivity" />
+        <activity android:name=".Activities.AdminRoomDetailsActivity" />
+        <activity android:name=".Activities.BookingDetailsActivity" />
+        <activity android:name=".MyRoomActivity" />
+        <activity android:name=".Activities.PaymentActivity" />
+        <activity android:name=".Activities.StudentRoomBookedActivity"></activity>
+    </application>
+
+</manifest>

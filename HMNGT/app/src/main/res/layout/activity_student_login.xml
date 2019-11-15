@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:elevation="5dp"
+        android:layout_centerVertical="true">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="14dp"
+            android:layout_marginLeft="14dp"
+            android:layout_marginBottom="14dp"
+            android:layout_centerVertical="true"
+            android:layout_below="@+id/tvSignIn">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:text="Sign In"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18dp"
+                android:layout_marginTop="6dp"
+                android:id="@+id/tvSignIn"/>
+
+            <TextView
+                android:layout_below="@+id/tvSignIn"
+                android:id="@+id/tvEmail"
+                android:layout_width="wrap_content"
+                android:text="Email"
+                android:layout_height="wrap_content"/>
+            <EditText
+                android:id="@+id/etEmail"
+                android:inputType="textEmailAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvEmail"/>
+
+            <TextView
+                android:text="Password"
+                android:id="@+id/tvPassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etEmail"/>
+            <EditText
+                android:id="@+id/etUserPassward"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:layout_below="@+id/tvPassword"/>
+
+
+            <TextView
+                android:id="@+id/tvRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/etUserPassward"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18dp"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_below="@+id/tvRegister"
+                android:text="Not Registered, Please  Click Here To Sign Up"
+                android:id="@+id/tvSignUp"/>
+            <Button
+                android:layout_marginTop="18dp"
+                android:id="@+id/Btn_login"
+                android:layout_width="wrap_content"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="#fff"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvSignUp"
+                android:text="Sign In"/>
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+
+</RelativeLayout>

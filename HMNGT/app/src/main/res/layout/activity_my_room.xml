@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.simon.hmngt.MyRoomActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/card"
+        android:layout_height="60dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="My Room"
+                android:textSize="25dp"
+                android:textColor="@color/colorPrimaryDark"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_below="@+id/card"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your assigned residence is::"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp"
+                android:id="@+id/lbl"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl"
+                android:textSize="16dp"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/tvName"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:id="@+id/lbl1"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp"
+                android:text="Your room floor is::"
+                android:layout_below="@+id/tvName"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl1"
+                android:textSize="16dp"
+                android:id="@+id/tvRoomNumber"
+                android:layout_marginLeft="20dp"/>
+
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="70dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="20dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_walkin"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your roommate is::"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="20dp"
+                android:id="@+id/lbl2"
+                android:layout_below="@+id/tvRoomNumber"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbl2"
+                android:id="@+id/tvRoomMate"
+                android:textSize="16dp"
+                android:layout_marginLeft="20dp"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vacate Room"
+                android:layout_below="@+id/tvRoomMate"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimaryDark"
+                android:textColor="#fff"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp"
+                android:layout_marginBottom="20dp"
+                android:id="@+id/bnVacate"/>
+
+            <RelativeLayout
+                android:layout_below="@+id/bnVacate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp">
+                <android.support.v7.widget.RecyclerView
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent"
+                    android:paddingBottom="20dp"
+                    android:id="@+id/recyclerView">
+                </android.support.v7.widget.RecyclerView>
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

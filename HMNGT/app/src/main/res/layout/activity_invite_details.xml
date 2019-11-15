@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.simon.hmngt.Activities.InviteDetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="20dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Invite"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="25sp"
+                    android:id="@+id/lbl1"
+                    android:layout_centerHorizontal="true"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Invited By:"
+                    android:layout_below="@+id/lbl1"
+                    android:textSize="16dp"
+                    android:id="@+id/lbl2"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl2"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16dp"
+                    android:id="@+id/tvInviteeName"/>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Religion:"
+                    android:layout_below="@+id/tvInviteeName"
+                    android:textSize="16dp"
+                    android:id="@+id/lbl3"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl3"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16dp"
+                    android:id="@+id/tvInviteeReligion"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sports Played:"
+                    android:layout_below="@+id/tvInviteeReligion"
+                    android:textSize="16dp"
+                    android:id="@+id/lbl4"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl4"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16dp"
+                    android:id="@+id/tvInviteeSports"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvInviteeSports"
+                    android:text="Hobbies:"
+                    android:textSize="16dp"
+                    android:id="@+id/lbl5"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl5"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16dp"
+                    android:id="@+id/tvInviteeHobbies"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/som"
+                    android:layout_marginTop="20dp"
+                    android:text="Room Details"
+                    android:layout_below="@+id/tvInviteeHobbies"
+                    android:layout_centerHorizontal="true"
+                    android:textSize="20dp"
+                    android:textColor="@color/colorPrimaryDark"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Room Number:"
+                    android:layout_below="@+id/som"
+                    android:textSize="16dp"
+                    android:id="@+id/lbl6"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl6"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16dp"
+                    android:id="@+id/tvRoomNumber"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Room Type"
+                    android:layout_below="@+id/tvRoomNumber"
+                    android:textSize="16dp"
+                    android:id="@+id/lbl7"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl7"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16dp"
+                    android:id="@+id/tvRoomType"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Room Floor"
+                    android:layout_below="@+id/tvRoomType"
+                    android:textSize="16dp"
+                    android:id="@+id/lbl8"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl8"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16dp"
+                    android:id="@+id/tvRoomFloor"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Room Description:"
+                    android:layout_below="@+id/tvRoomFloor"
+                    android:textSize="16dp"
+                    android:id="@+id/lbl9"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl9"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="16dp"
+                    android:id="@+id/tvRoomDescription"/>
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvRoomDescription"
+                    android:layout_centerHorizontal="true"
+                    android:background="@color/colorPrimaryDark"
+                    android:text="Accept"
+                    android:id="@+id/accept"
+                    android:textColor="#fff"/>
+            </RelativeLayout>
+
+        </android.support.v7.widget.CardView>
+    </ScrollView>
+</RelativeLayout>

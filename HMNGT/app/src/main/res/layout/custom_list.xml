@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/linear"
+            android:padding="10dp">
+            <CheckBox
+                android:id="@+id/check_box"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/linear"
+            android:text="Hobbies"
+            android:textSize="16dp"
+            android:id="@+id/lbl" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lbl"
+            android:layout_marginLeft="20dp"
+            android:textSize="16dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/tvHobbies"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvHobbies"
+            android:text="Sports"
+            android:textSize="16dp"
+            android:id="@+id/lbl1" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lbl1"
+            android:layout_marginLeft="20dp"
+            android:textSize="16dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/tvSports"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvSports"
+            android:text="Religion"
+            android:textSize="16dp"
+            android:id="@+id/lbl2" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/lbl2"
+            android:layout_marginLeft="20dp"
+            android:textSize="16dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/tvReligion"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

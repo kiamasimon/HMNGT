@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.simon.hmngt.Activities.StudentRegisrationActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v7.widget.CardView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="10dp"
+            android:elevation="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_marginTop="4dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_width="match_parent"
+                android:layout_marginBottom="60dp"
+                android:layout_height="match_parent">
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Student SignUp"
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/lbl"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lbl1"
+                    android:textSize="16dp"
+                    android:layout_below="@+id/lbl"
+                    android:text="User name"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl1"
+                    android:textSize="16dp"
+                    android:id="@+id/edUserName"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lbl2"
+                    android:textSize="16dp"
+                    android:layout_below="@+id/edUserName"
+                    android:text="First Name"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl2"
+                    android:textSize="16dp"
+                    android:id="@+id/edFirstName"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:id="@+id/lbl3"
+                    android:layout_below="@+id/edFirstName"
+                    android:text="Last Name"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:textSize="16dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl3"
+                    android:id="@+id/edLastName"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:layout_below="@+id/edLastName"
+                    android:id="@+id/lbl4"
+                    android:text="Email"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:textSize="16dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl4"
+                    android:id="@+id/edEmail"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/lbl5"
+                    android:textSize="16dp"
+                    android:layout_below="@+id/edEmail"
+                    android:text="Password"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl5"
+                    android:textSize="16dp"
+                    android:id="@+id/edPassword"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textSize="16dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/edPassword"
+                    android:id="@+id/lbl6"
+                    android:text="Confirm Password"/>
+                <EditText
+                    android:layout_width="match_parent"
+                    android:textSize="16dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbl6"
+                    android:id="@+id/edConfirmPassword"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:id="@+id/lblg"
+                    android:layout_below="@+id/edConfirmPassword"/>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioGroup"
+                    android:layout_below="@+id/lblg">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbMale"
+                        android:text="Male"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbFemale"
+                        android:text="Female"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/rbTrans"
+                        android:text="Trans-Gender"/>
+                </RadioGroup>
+
+                <Button
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/bnRegister"
+                    android:text="Register"
+                    android:layout_below="@+id/lblg"
+                    android:layout_marginTop="20dp"
+                    android:layout_centerHorizontal="true"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </ScrollView>
+</RelativeLayout>
