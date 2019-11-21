@@ -515,13 +515,21 @@ def student_room(request, student_id):
             r_id = StudentSelections.objects.filter(possible_roommate_id=student_id, pairing_status='Complete').first().student_id
         if r_id != 0:
             roommate = Student.objects.filter(id=r_id).first()
-            s = StudentSerializer(roommate, many=False)
-            context = {
-                'room': d.data,
-                'roommate': s.data,
-                'response': 'Assigned Residence Details'
-            }
-            return Response(context, status=status.HTTP_200_OK)
+            roommate_room = StudentRoom.objects.filter(student_id=roommate.id).first()
+            if roommate_room is not None:
+                s = StudentSerializer(roommate, many=False)
+                context = {
+                    'room': d.data,
+                    'roommate': s.data,
+                    'response': 'Assigned Residence Details'
+                }
+                return Response(context, status=status.HTTP_200_OK)
+            else:
+                context = {
+                    'room': d.data,
+                    'response': 'Your Roommate Vacated'
+                }
+                return Response(context, status=status.HTTP_200_OK)
         else:
             context = {
                 'response': 'No roommate assigned to you yet',
@@ -662,9 +670,18 @@ def uninvite_student(request, student_id, possible_roommate_id):
 @permission_classes((AllowAny,))
 def vacate_room(request, student_id):
     student_room = StudentRoom.objects.filter(student_id=student_id).first()
+
     if student_room is not None:
         student_room.delete()
-        context = {
+        if StudentRoom.objects.filter(room_id=student_room.room_id).count() > 0:
+            Room.objects.filter(id=student_room.room_id).update(
+                status_occupied='Partial'
+            )
+        else:
+            Room.objects.filter(id=student_room.room_id).update(
+                status_occupied=''
+            )
+            context = {
             'message': 'Vacation successfull',
         }
         return Response(context, status=status.HTTP_200_OK)
