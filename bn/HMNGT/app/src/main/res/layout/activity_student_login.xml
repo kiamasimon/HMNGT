@@ -22,12 +22,22 @@
             android:layout_centerVertical="true"
             android:layout_below="@+id/tvSignIn">
 
+            <ImageView
+                android:layout_width="200dp"
+                android:id="@+id/im"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_written"
+                android:layout_height="200dp">
+
+            </ImageView>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/im"
                 android:text="Sign In"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/primary_dark"
                 android:textSize="18dp"
                 android:layout_marginTop="6dp"
                 android:id="@+id/tvSignIn"/>
@@ -36,7 +46,7 @@
                 android:layout_below="@+id/tvSignIn"
                 android:id="@+id/tvEmail"
                 android:layout_width="wrap_content"
-                android:text="Email"
+                android:text="User Name"
                 android:layout_height="wrap_content"/>
             <EditText
                 android:id="@+id/etEmail"
@@ -69,7 +79,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="18dp"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/primary_dark"
                 android:layout_below="@+id/tvRegister"
                 android:text="Not Registered, Please  Click Here To Sign Up"
                 android:id="@+id/tvSignUp"/>
@@ -77,7 +87,7 @@
                 android:layout_marginTop="18dp"
                 android:id="@+id/Btn_login"
                 android:layout_width="wrap_content"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/primary_dark"
                 android:textColor="#fff"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tvSignUp"

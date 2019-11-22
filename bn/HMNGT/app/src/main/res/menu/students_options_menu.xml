@@ -8,9 +8,9 @@
         android:id="@+id/invites"
         android:title="Invites" />
 
-    <item
-        android:id="@+id/change_room"
-        android:title="Change Room" />
+<!--    <item-->
+<!--        android:id="@+id/change_room"-->
+<!--        android:title="Change Room" />-->
 
     <item
         android:id="@+id/my_room"

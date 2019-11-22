@@ -48,14 +48,14 @@
         <activity
             android:name=".Activities.AddRoomActivity"
             android:parentActivityName=".AdminRoomsListActivity" />
-        <activity android:name=".Activities.RoomDetailsActivity" />
-        <activity android:name=".InvitesActivity" />
+        <activity android:name=".Activities.RoomDetailsActivity" android:parentActivityName=".Activities.StudentDashboardactivity"/>
+        <activity android:name=".InvitesActivity" android:parentActivityName=".Activities.StudentDashboardactivity" />
         <activity
             android:name=".Activities.InviteDetailsActivity"
             android:parentActivityName=".InvitesActivity" />
         <activity android:name=".Activities.AdminRoomDetailsActivity" />
         <activity android:name=".Activities.BookingDetailsActivity" />
-        <activity android:name=".MyRoomActivity" />
+        <activity android:name=".MyRoomActivity" android:parentActivityName=".Activities.StudentDashboardactivity"/>
         <activity android:name=".Activities.PaymentActivity" />
         <activity android:name=".Activities.StudentRoomBookedActivity"></activity>
     </application>

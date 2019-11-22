@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/tvStudentName"
             android:textSize="12dp"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/primary_dark"
             android:layout_toRightOf="@+id/lbl1"
             android:layout_marginLeft="5dp"/>
 

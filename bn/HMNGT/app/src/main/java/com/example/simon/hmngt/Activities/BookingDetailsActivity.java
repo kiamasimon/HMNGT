@@ -30,6 +30,7 @@ public class BookingDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_booking_details);
+        setTitle("Booking Details");
 
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(false);

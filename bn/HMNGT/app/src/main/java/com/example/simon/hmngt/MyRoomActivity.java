@@ -87,7 +87,7 @@ public class MyRoomActivity extends AppCompatActivity {
                     }
                     @Override
                     public void onError(ANError anError) {
-                        Toast.makeText(getApplicationContext(), "Could Not Get Room Details", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), ""+anError, Toast.LENGTH_LONG).show();
                     }
                 });
     }
@@ -101,7 +101,7 @@ public class MyRoomActivity extends AppCompatActivity {
                 .getAsObject(Message.class, new ParsedRequestListener<Message>(){
                     @Override
                     public void onResponse(Message message) {
-                        if (message.getMessage().equals("Invite Revoked")){
+                        if (message.getMessage().equals("Vacation successfull")){
                             Toast.makeText(getApplicationContext(), "" + message.getMessage(), Toast.LENGTH_LONG).show();
                             Intent in = new Intent(getApplicationContext(), StudentDashboardactivity.class);
                             startActivity(in);

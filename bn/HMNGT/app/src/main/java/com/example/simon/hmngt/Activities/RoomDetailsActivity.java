@@ -47,6 +47,7 @@ public class RoomDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_room_details);
+        setTitle("Room Details");
         tvRoomDescription = findViewById(R.id.tvRoomDescription);
         tvRoomFloor = findViewById(R.id.tvRoomFloor);
         tvRoomNumber = findViewById(R.id.tvRoomNumber);

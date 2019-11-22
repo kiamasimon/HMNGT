@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:id="@+id/label"
-            android:textColor="@color/design_default_color_primary_dark"
+            android:textColor="@color/primary_dark"
             android:textSize="25dp"
             android:layout_marginRight="10dp"
             android:layout_marginLeft="10dp"
@@ -24,7 +24,7 @@
     </RelativeLayout>
 
     <RelativeLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:layout_centerHorizontal="true"
@@ -32,7 +32,7 @@
         android:id="@+id/layout2"
         android:layout_below="@id/layout1">
 
-        <Button
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_marginTop="12dp"
@@ -40,13 +40,25 @@
             android:elevation="7dp"
             android:layout_marginRight="10dp"
             android:background="#e2e2e2"
-            android:text="Management"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:id="@+id/Admin"
-            android:textColor="@color/colorPrimaryDark" />
+            android:id="@+id/Admin">
 
-        <Button
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Management"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/primary_dark"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:textSize="30dp"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:layout_marginTop="14dp"
@@ -54,12 +66,23 @@
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
             android:layout_below="@+id/Admin"
-            android:text="Student"
-            android:background="#e2e2e2"
-            android:textSize="20dp"
             android:id="@+id/Student"
-            android:textColor="@color/colorPrimaryDark"
-            android:textStyle="bold" />
+            android:textColor="@color/primary_dark">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Student"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/primary_dark"
+                    android:textStyle="bold"
+                    android:layout_centerVertical="true"
+                    android:textSize="30dp"/>
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
     </RelativeLayout>
 
 </RelativeLayout>

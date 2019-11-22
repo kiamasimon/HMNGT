@@ -20,7 +20,7 @@
                 android:layout_centerVertical="true"
                 android:text="My Room"
                 android:textSize="25dp"
-                android:textColor="@color/colorPrimaryDark"/>
+                android:textColor="@color/primary_dark"/>
         </RelativeLayout>
     </android.support.v7.widget.CardView>
 
@@ -42,7 +42,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Your assigned residence is::"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/primary_dark"
                 android:textSize="20dp"
                 android:id="@+id/lbl"/>
             <TextView
@@ -57,7 +57,7 @@
                 android:layout_width="wrap_content"
                 android:id="@+id/lbl1"
                 android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/primary_dark"
                 android:textSize="20dp"
                 android:text="Your room floor is::"
                 android:layout_below="@+id/tvName"/>
@@ -81,7 +81,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Your roommate is::"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/primary_dark"
                 android:textSize="20dp"
                 android:id="@+id/lbl2"
                 android:layout_below="@+id/tvRoomNumber"/>
@@ -99,7 +99,7 @@
                 android:text="Vacate Room"
                 android:layout_below="@+id/tvRoomMate"
                 android:layout_marginTop="20dp"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/primary_dark"
                 android:textColor="#fff"
                 android:paddingLeft="3dp"
                 android:paddingRight="3dp"

@@ -26,6 +26,7 @@ public class PaymentActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
+        setTitle("Payment");
 
         bnPay = findViewById(R.id.bnPay);
         edPayment = findViewById(R.id.edPayment);
@@ -53,6 +54,8 @@ public class PaymentActivity extends AppCompatActivity {
                     public void onResponse(Message message) {
                         if(message.getMessage().equals("Payment Successful")){
                             Toast.makeText(getApplicationContext(), "Payment Successful", Toast.LENGTH_LONG).show();
+                            Intent in = new Intent(getApplicationContext(), StudentDashboardactivity.class);
+                            startActivity(in);
                         }else {
                             Toast.makeText(getApplicationContext(), ""+message.getMessage(), Toast.LENGTH_LONG).show();
                         }

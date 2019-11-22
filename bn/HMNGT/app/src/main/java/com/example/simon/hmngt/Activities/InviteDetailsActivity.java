@@ -35,6 +35,7 @@ public class InviteDetailsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_invite_details);
+        setTitle("Invite Details");
         tvInviteeName = findViewById(R.id.tvInviteeName);
         tvInviteeHobbies = findViewById(R.id.tvInviteeHobbies);
         tvInviteeReligion = findViewById(R.id.tvInviteeReligion);

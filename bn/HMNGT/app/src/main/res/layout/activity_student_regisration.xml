@@ -23,11 +23,22 @@
                 android:layout_width="match_parent"
                 android:layout_marginBottom="60dp"
                 android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="200dp"
+                    android:id="@+id/im"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ic_written"
+                    android:layout_height="200dp">
+
+                </ImageView>
+
                 <TextView
                     android:layout_marginTop="10dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="20dp"
+                    android:layout_below="@+id/im"
                     android:text="Student SignUp"
                     android:layout_centerHorizontal="true"
                     android:id="@+id/lbl"/>
@@ -152,7 +163,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/bnRegister"
                     android:text="Register"
-                    android:layout_below="@+id/lblg"
+                    android:layout_below="@+id/radioGroup"
                     android:layout_marginTop="20dp"
                     android:layout_centerHorizontal="true"/>
             </RelativeLayout>

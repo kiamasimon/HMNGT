@@ -29,7 +29,7 @@
                     android:id="@+id/lbl"
                     android:layout_centerHorizontal="true"
                     android:textSize="20dp"
-                    android:textColor="@color/design_default_color_primary_dark"
+                    android:textColor="@color/primary_dark"
                     android:text="Room Details"/>
 
                 <TextView
@@ -42,7 +42,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/design_default_color_primary_dark"
+                    android:textColor="@color/primary_dark"
                     android:textSize="16dp"
                     android:id="@+id/tvRoomNumber"
                     android:layout_below="@+id/lbl2"/>
@@ -57,7 +57,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/design_default_color_primary_dark"
+                    android:textColor="@color/primary_dark"
                     android:textSize="16dp"
                     android:layout_below="@+id/lbl3"
                     android:id="@+id/tvRoomType"/>
@@ -72,7 +72,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/design_default_color_primary_dark"
+                    android:textColor="@color/primary_dark"
                     android:textSize="16dp"
                     android:id="@+id/tvRoomFloor"
                     android:layout_below="@+id/lbl4"/>
@@ -87,7 +87,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/design_default_color_primary_dark"
+                    android:textColor="@color/primary_dark"
                     android:textSize="16dp"
                     android:id="@+id/tvRoomDescription"
                     android:layout_below="@+id/lbl5"/>

@@ -5,6 +5,7 @@ from pprint import pprint
 
 import requests
 from django.contrib.auth import authenticate
+from django.contrib.auth.hashers import make_password
 from django.http import JsonResponse
 from django.shortcuts import render
 
@@ -98,7 +99,7 @@ def signup2(request):
         )
     new_user = Student.objects.create(
         username=username,
-        password=password,
+        password=make_password(password),
         email=email,
         first_name=first_name,
         last_name=last_name,
@@ -272,7 +273,7 @@ def student_room_booking(request, student_id, room_id):
         roommate_list = roommate_ids.replace('%', '')
         chars = roommate_list.split('[', 1)[1]
         c = chars.split(']', 1)[0]
-        print(c)
+        print(eval(c))
         # for r in c.replace(",", ''):
         #     if r != "'" or r != "[" or r != "]":
         #         print(r)
@@ -290,6 +291,10 @@ def student_room_booking(request, student_id, room_id):
                 student_id=student_id,
                 room_id=room_id,
                 approvement_status=False
+            )
+            StudentRoom.objects.create(
+                student_id=student_id,
+                room_id=room_id
             )
             room.status_occupied = 'Occupied'
             room.save()
@@ -310,7 +315,7 @@ def student_room_booking(request, student_id, room_id):
             room.status_occupied = 'Partial'
             room.save()
             if c.__contains__(','):
-                for id in c:
+                for id in eval(c):
                     print(id)
                     StudentSelections.objects.create(
                         student_id=student_id,
@@ -339,8 +344,8 @@ def get_room_details(request, room_id, student_id):
     ids = []
     for s_room in ds:
         ids.append(s_room.student_id)
-    many_ids = set(ids)
-    students = Student.objects.exclude(id__in=many_ids, gender=student.gender).exclude(id=student_id)
+
+    students = Student.objects.filter(gender=student.gender).exclude(id__in=set(ids)).exclude(id=student_id)
 
     s = RoomSerializer(room, many=False)
     d = StudentSerializer(students, many=True)
@@ -458,7 +463,7 @@ def accept_invite(request, student_id, invite_id):
 @api_view(["GET"])
 @permission_classes((AllowAny,))
 def admin_get_bookings(request):
-    bookings = StudentBooking.objects.all()
+    bookings = StudentBooking.objects.filter(approvement_status=False)
     if bookings.count() < 1:
         context = {
             'response': 'Currently No Bookings'
@@ -538,8 +543,11 @@ def student_room(request, student_id):
             return Response(context, status=status.HTTP_200_OK)
     else:
         context = {
-            'room': 'You are not assign a room yet',
+            'response': 'You are not assign a room yet',
+            'room': 'no room',
+            'roommate': 'no data',
         }
+        print('here')
         return Response(context, status=status.HTTP_200_OK)
 
 
@@ -560,7 +568,7 @@ def get_access_token():
 def initiate_stk_push(request, student_id, room_id):
     if MpesaPayment.objects.filter(student_id=student_id, room_id=room_id).count() > 0:
         context = {
-            'response': 'You already payed for this room'
+            'message': 'You already payed for this room'
         }
         return Response(context, status=status.HTTP_200_OK)
     else:
@@ -585,7 +593,7 @@ def initiate_stk_push(request, student_id, room_id):
             "Timestamp": timestamp,
             "TransactionType": "CustomerPayBillOnline",
             "Amount": "1",
-            "PartyA": "254704878824",
+            "PartyA": "254704976963",
             "PartyB": "174379",
             "PhoneNumber": "254704976963",
             "CallBackURL": "https://8cc770f1.ngrok.io/api/callback",
@@ -682,12 +690,12 @@ def vacate_room(request, student_id):
                 status_occupied=''
             )
             context = {
-            'message': 'Vacation successfull',
-        }
-        return Response(context, status=status.HTTP_200_OK)
+                'message': 'Vacation successfull',
+            }
+            return Response(context, status=status.HTTP_200_OK)
     else:
         context = {
-            'message': 'Invalid',
+            'message': 'No Room Assigned To You Yet',
         }
         return Response(context, status=status.HTTP_200_OK)
 

@@ -26,6 +26,7 @@ public class AddRoomActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_room);
+        setTitle("Add Room");
 
         bnAdd = findViewById(R.id.bnAdd);
         edRoomNumber = findViewById(R.id.edRoomNumber);

@@ -27,7 +27,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_height="wrap_content"
                 android:text=" Management Sign In"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/primary_dark"
                 android:textSize="20dp"
                 android:layout_marginTop="6dp"
                 android:id="@+id/tvSignIn"/>
@@ -76,7 +76,7 @@
                 android:id="@+id/Btn_login"
                 android:layout_centerHorizontal="true"
                 android:layout_width="wrap_content"
-                android:background="@color/colorPrimaryDark"
+                android:background="@color/primary_dark"
                 android:textColor="#fff"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/tvRegister"

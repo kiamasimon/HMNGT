@@ -91,6 +91,7 @@ public class InvitedAdapter extends RecyclerView.Adapter<InvitedAdapter.InvitedV
                                     if (message.getMessage().equals("Invite Revoked")){
                                         Toast.makeText(mCtx.getApplicationContext(), "" + message.getMessage(), Toast.LENGTH_LONG).show();
                                         Intent in = new Intent(mCtx.getApplicationContext(), StudentDashboardactivity.class);
+                                        in.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                                         mCtx.startActivity(in);
 
                                     }else{

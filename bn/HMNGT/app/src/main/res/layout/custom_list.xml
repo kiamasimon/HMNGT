@@ -43,7 +43,7 @@
             android:layout_below="@+id/lbl"
             android:layout_marginLeft="20dp"
             android:textSize="16dp"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/primary_dark"
             android:id="@+id/tvHobbies"/>
 
         <TextView
@@ -59,7 +59,7 @@
             android:layout_below="@+id/lbl1"
             android:layout_marginLeft="20dp"
             android:textSize="16dp"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/primary_dark"
             android:id="@+id/tvSports"/>
 
         <TextView
@@ -75,7 +75,7 @@
             android:layout_below="@+id/lbl2"
             android:layout_marginLeft="20dp"
             android:textSize="16dp"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/primary_dark"
             android:id="@+id/tvReligion"/>
 
 

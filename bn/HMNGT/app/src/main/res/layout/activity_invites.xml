@@ -13,7 +13,7 @@
         android:layout_centerHorizontal="true"
         android:textSize="20dp"
         android:layout_marginTop="10dp"
-        android:textColor="@color/design_default_color_primary_dark"
+        android:textColor="@color/primary_dark"
         android:id="@+id/lbl"/>
     <android.support.v7.widget.RecyclerView
         android:layout_marginTop="20dp"
