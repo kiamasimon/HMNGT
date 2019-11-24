@@ -33,4 +33,16 @@ public class Example5 {
     public Student getRoommate() {
         return roommate;
     }
+
+    public void setResponse(String response) {
+        this.response = response;
+    }
+
+    public void setRoommate(Student roommate) {
+        this.roommate = roommate;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
+    }
 }

@@ -314,20 +314,14 @@ def student_room_booking(request, student_id, room_id):
             )
             room.status_occupied = 'Partial'
             room.save()
-            if c.__contains__(','):
-                for id in eval(c):
+            for id in eval(c):
                     print(id)
                     StudentSelections.objects.create(
                         student_id=student_id,
                         possible_roommate_id=id,
                         pairing_status='Pending'
                     )
-            else:
-                StudentSelections.objects.create(
-                    student_id=student_id,
-                    possible_roommate_id=c,
-                    pairing_status='Pending'
-                )
+
             context = {
                 'response': 'done'
             }
@@ -397,7 +391,7 @@ def get_invites(request, student_id):
 def invite_details(request, student_id, invite_id, ):
     invited_by = Student.objects.filter(id=invite_id).first()
     booking = StudentBooking.objects.filter(student_id=invite_id, approvement_status=True).first()
-    if StudentBooking.objects.filter(student_id=student_id, approvement_status=True).count() > 0:
+    if StudentBooking.objects.filter(student_id=invite_id, approvement_status=True).count() > 0:
         if booking is not None:
             room = Room.objects.filter(id=booking.room_id).first()
             s = RoomSerializer(room, many=False)
@@ -410,13 +404,14 @@ def invite_details(request, student_id, invite_id, ):
             return Response(context, status=status.HTTP_201_CREATED)
         else:
             context = {
-                'message': 'That student\'s booking has not been approved'
+                'response': 'That student\'s booking has not been approved'
             }
             return Response(context, status=status.HTTP_200_OK)
     else:
         context = {
-
+            'response': 'Invalid Invite'
         }
+        return Response(context, status=status.HTTP_200_OK)
 
 
 @csrf_exempt
@@ -511,17 +506,20 @@ def get_booking_details(request, room_id):
 def student_room(request, student_id):
     if StudentRoom.objects.filter(student_id=student_id).count() > 0:
         student = StudentRoom.objects.filter(student_id=student_id).first()
-        room = Room.objects.filter(id=student.room.id).first()
+        room = Room.objects.filter(id=student.room_id).first()
         d = RoomSerializer(room, many=False)
+        print(d.data)
+
         r_id = 0
         if StudentSelections.objects.filter(student_id=student_id, pairing_status='Complete').count() > 0:
             r_id = StudentSelections.objects.filter(student_id=student_id, pairing_status='Complete').first().possible_roommate_id
         elif StudentSelections.objects.filter(possible_roommate_id=student_id, pairing_status='Complete').count() > 0:
             r_id = StudentSelections.objects.filter(possible_roommate_id=student_id, pairing_status='Complete').first().student_id
-        if r_id != 0:
+        if r_id != 0 and r_id is not None:
+
             roommate = Student.objects.filter(id=r_id).first()
             roommate_room = StudentRoom.objects.filter(student_id=roommate.id).first()
-            if roommate_room is not None:
+            if  roommate is not None and roommate_room is not None:
                 s = StudentSerializer(roommate, many=False)
                 context = {
                     'room': d.data,
@@ -530,10 +528,12 @@ def student_room(request, student_id):
                 }
                 return Response(context, status=status.HTTP_200_OK)
             else:
+                print('none')
                 context = {
                     'room': d.data,
-                    'response': 'Your Roommate Vacated'
+                    'response': 'Your Roommate Vacated',
                 }
+                print(context)
                 return Response(context, status=status.HTTP_200_OK)
         else:
             context = {
@@ -653,6 +653,11 @@ def student_room_invitees(request, student_id):
             }
             pprint(s.data)
             return Response(s.data, status=status.HTTP_200_OK)
+    else:
+        context = {
+            'response': 'none'
+        }
+        return Response(context, status=status.HTTP_200_OK)
 
 
 @csrf_exempt
@@ -685,6 +690,10 @@ def vacate_room(request, student_id):
             Room.objects.filter(id=student_room.room_id).update(
                 status_occupied='Partial'
             )
+            context = {
+                'message': 'Vacation successfull',
+            }
+            return Response(context, status=status.HTTP_200_OK)
         else:
             Room.objects.filter(id=student_room.room_id).update(
                 status_occupied=''

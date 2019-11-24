@@ -97,7 +97,7 @@ public class InviteDetailsActivity extends AppCompatActivity {
     }
 
 
-    public void accept_invite(final String student_id, final String invitee_id, final String k_id){
+    public void accept_invite(String student_id, String invitee_id, String k_id){
         AndroidNetworking.post( BASE_URL + "/accept_invite/{student_id}/{invitee_id}")
                 .addPathParameter("student_id", student_id)
                 .addPathParameter("invitee_id", invitee_id)
@@ -111,8 +111,8 @@ public class InviteDetailsActivity extends AppCompatActivity {
                             Toast.makeText(getApplicationContext(), ""+invite.getResponse(), Toast.LENGTH_LONG).show();
                         }else if (invite.getResponse().equals("Pairing Complete")) {
                             Intent ac = new Intent(InviteDetailsActivity.this, PaymentActivity.class);
-                            ac.putExtra("student_id", student_id);
-                            ac.putExtra("room_id", k_id);
+                            ac.putExtra("student_id", student);
+                            ac.putExtra("room_id", r_id);
 //                            Toast.makeText(getApplicationContext(), "Invite Accepted, Pairing Complete", Toast.LENGTH_LONG).show();
 //                            Intent intent = new Intent(InviteDetailsActivity.this, StudentDashboardactivity.class);
                             startActivity(ac);

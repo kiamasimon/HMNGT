@@ -77,10 +77,16 @@ public class MyRoomActivity extends AppCompatActivity {
                             tvRoomNumber.setText(example5.getRoom().getFloor());
                             room_id = example5.getRoom().getId();
 
-                        }else if(example5.getResponse().equals("No roommate assigned to you yet")){
+                        }else if(example5.getResponse().equals("No roommate assigned to you yet")) {
                             tvName.setText(example5.getRoom().getRoom_number());
                             tvRoomNumber.setText(example5.getRoom().getFloor());
                             tvRoomMate.setText("No roomate assigned to you yet");
+
+                        }else if(example5.getResponse().equals("Your Roommate Vacated")){
+                            tvName.setText(example5.getRoom().getRoom_number());
+                            tvRoomNumber.setText(example5.getRoom().getFloor());
+                            tvRoomMate.setText("Your Roommate Vacated");
+
                         }else {
                             Toast.makeText(getApplicationContext(), ""+example5.getResponse(), Toast.LENGTH_LONG).show();
                         }
